@@ -1,49 +1,125 @@
 <!DOCTYPE html>
 <html>
+	<!-- 
+    Title: Adventure, Inc.
+    Author: Randy Aitken
+    Created: 4/10/20
+    Notes: Created for IST-422-940, SIU
+
+    Last Updated: 1/28/20
+	Purpose: Web Application for company, Adventure, Inc. which provides simulated challenge experiences for thrill seekers. 
+-->
 <head>
-<title>The Camden Hotel</title>
-	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<meta charset="utf-8">
+	<title>Utilities</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="CSS/jquery.mobile-1.4.5.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+	<link rel="stylesheet" href="themes/test1.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
-
 <body>
-
-<div data-role="page">
-
-	<div data-role="header" data-position="fixed">
-			<h1>Camden Hotel</h1>
-			<div data-role="navbar" data-iconpos="top">
+	<div data-role="page" id="homePage" title="Adventure, Inc.">
+		<div data-role="header" data-position="fixed">
+			<div data-role="navbar">
 				<ul>
-					<li><a href="index.html" data-ajax="false" data-icon="home">Home</a></li>
-					<li><a href="rooms.html" data-ajax="false" data-icon="star">Rooms</a></li>
-					<li><a href="experiences.html" data-ajax="false" data-icon="gear">Experiences</a></li>
+					<li><a href="experiencePage" data-ajax="false">Experiences</a></li>
+					<li><a href="eventsPage" data-ajax="false">Events</a></li>
+					<li><a href="testimonialsPage" data-ajax="false">Testimonials</a></li>
+					<li><a href="logbookPage" data-ajax="false">Logbook</a></li>
 				</ul>
 			</div>
 		</div>
 	
-	<div role="main" class="ui-content">
-
-		<p>
-			Welcome to the Camden Hotel. We are luxury hotel specializing in catering to the rich and overly privileged. 
-			You will find our accommodations both flattering to your ego as well as damaging to your wallet. Enjoy our 
-			complimentary wi-fi access as well as caviar baths while sleeping in beds with gold thread.
-		</p>
-
-		<ul data-role="listview" data-inset="true" data-iconpos="left">
-			<li><a href="find.html" data-role="button" data-icon="location">Find Us</a></li>
-			<li><a href="rooms.html" data-role="button" data-icon="star">Our Rooms</a></li>
-			<li><a href="experiences.html" data-role="button" data-icon="gear">Experiences</a></li>
-			<li><a href="contact.html" data-role="button" data-icon="mail">Contact Us</a></li>
-			<li><a href="" data-role="button" data-icon="cloud">Non-Mobile Site</a></li>
-		</ul>
 	</div>
-
-	<div data-role="footer">
-		<h4>&copy; Camden Hotel 2016</h4>
+	<div data-role="page" id="contactPage" title="Adventure, Inc.">
+		<div data-role="header" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="homePage" data-ajax="false">Home</a></li>
+				</ul>
+			</div>
+		</div>		
+	
+	
 	</div>
-		
-</div>
-
+	<div data-role="page" id="aboutPage" title="Adventure, Inc.">
+		<div data-role="header" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="homePage" data-ajax="false">Home</a></li>
+				</ul>
+			</div>
+		</div>	
+	
+	</div>
+	<div data-role="page" id="ticketsPage" title="Adventure, Inc.">
+		<div data-role="header" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="homePage" data-ajax="false">Home</a></li>
+					<li><a href="experiencePage" data-ajax="false">Experiences</a></li>
+					<li><a href="eventsPage" data-ajax="false">Events</a></li>
+				</ul>
+			</div>
+		</div>	
+	
+	</div>
+	<div data-role="page" id="experiencesPage" title="Adventure, Inc.">
+		<div data-role="header" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="homePage" data-ajax="false">Home</a></li>
+					<li><a href="eventsPage" data-ajax="false">Events</a></li>
+					<li><a href="testimonialsPage" data-ajax="false">Testimonials</a></li>
+					<li><a href="logbookPage" data-ajax="false">Logbook</a></li>
+				</ul>
+			</div>
+		</div>	
+	
+	</div>
+	<div data-role="page" id="eventsPage" title="Adventure, Inc.">
+		<div data-role="header" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="homePage" data-ajax="false">Home</a></li>
+					<li><a href="experiencePage" data-ajax="false">Experiences</a></li>
+					<li><a href="testimonialsPage" data-ajax="false">Testimonials</a></li>
+					<li><a href="logbookPage" data-ajax="false">Logbook</a></li>
+				</ul>
+			</div>
+		</div>	
+	
+	</div>
+	<div data-role="page" id="testimonialsPage" title="Adventure, Inc.">
+		<div data-role="header" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="homePage" data-ajax="false">Home</a></li>
+					<li><a href="experiencePage" data-ajax="false">Experiences</a></li>
+					<li><a href="eventsPage" data-ajax="false">Events</a></li>
+					<li><a href="logbookPage" data-ajax="false">Logbook</a></li>
+				</ul>
+			</div>
+		</div>	
+	
+	</div>
+	<div data-role="page" id="logbookPage" title="Adventure, Inc.">
+		<div data-role="header" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="homePage" data-ajax="false">Home</a></li>
+					<li><a href="experiencesPage" data-ajax="false">Experiences</a></li>
+					<li><a href="eventsPage" data-ajax="false">Events</a></li>
+					<li><a href="testimonialsPage" data-ajax="false">Testimonials</a></li>
+				</ul>
+			</div>
+		</div>	
+	
+	</div>
+	
 </body>
 </html>
