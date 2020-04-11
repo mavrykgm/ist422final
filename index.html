@@ -10,111 +10,131 @@
 	Purpose: Web Application for company, Adventure, Inc. which provides simulated challenge experiences for thrill seekers. 
 -->
 <head>
+
 	<meta charset="utf-8">
-	<title>Utilities</title>
+	<title>Avdenture, Inc. </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="CSS/jquery.mobile-1.4.5.min.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
-	<link rel="stylesheet" href="themes/test1.min.css" />
+	<script src="js/themes.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="themes/siutest.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	
+
 </head>
+	
 <body>
 	<div data-role="page" id="homePage" title="Adventure, Inc.">
 		<div data-role="header" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="experiencePage" data-ajax="false">Experiences</a></li>
-					<li><a href="eventsPage" data-ajax="false">Events</a></li>
-					<li><a href="testimonialsPage" data-ajax="false">Testimonials</a></li>
-					<li><a href="logbookPage" data-ajax="false">Logbook</a></li>
+					<li><a href="#experiencePage" data-ajax="false">Experiences</a></li>
+					<li><a href="#eventsPage" data-ajax="false">Events</a></li>
+					<li><a href="#testimonialsPage" data-ajax="false">Testimonials</a></li>
+					<li><a href="#logbookPage" data-ajax="false">Logbook</a></li>
 				</ul>
 			</div>
 		</div>
+		
+		<input id="myButton" type="button" value="ChangeTheme" />
+		
+		<div data-role="footer" data-position="fixed" data-fullscreen="true">
+			<a href="#contactPage">Contact</a>
+			<a href="#aboutPage" >About</a>
+			<a href="http://www.siu.edu">SUIC &copy; 2020</a>
+			<ul>
+				<li><a href="https://www.facebook.com/DistractedMindGames/" class="fa fa-facebook tooltip"></a></li>
+				<li><a href="#" class="fa fa-instagram tooltip"></a></li>
+				<li><a href="#" class="fa fa-twitter tooltip"></a></li>
+			</ul>
+		</div>
 	
 	</div>
-	<div data-role="page" id="contactPage" title="Adventure, Inc.">
+	<div data-role="page" id="contactPage" title="Home">
 		<div data-role="header" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="homePage" data-ajax="false">Home</a></li>
+					<li><a href="#homePage" data-ajax="false">Home</a></li>
 				</ul>
 			</div>
 		</div>		
 	
 	
 	</div>
-	<div data-role="page" id="aboutPage" title="Adventure, Inc.">
+	<div data-role="page" id="aboutPage" title="About">
 		<div data-role="header" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="homePage" data-ajax="false">Home</a></li>
+					<li><a href="#homePage" data-ajax="false">Home</a></li>
 				</ul>
 			</div>
 		</div>	
 	
 	</div>
-	<div data-role="page" id="ticketsPage" title="Adventure, Inc.">
+	<div data-role="page" id="ticketsPage" title="Tickets">
 		<div data-role="header" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="homePage" data-ajax="false">Home</a></li>
-					<li><a href="experiencePage" data-ajax="false">Experiences</a></li>
-					<li><a href="eventsPage" data-ajax="false">Events</a></li>
+					<li><a href="#homePage" data-ajax="false">Home</a></li>
+					<li><a href="#experiencePage" data-ajax="false">Experiences</a></li>
+					<li><a href="#eventsPage" data-ajax="false">Events</a></li>
 				</ul>
 			</div>
 		</div>	
 	
 	</div>
-	<div data-role="page" id="experiencesPage" title="Adventure, Inc.">
+	<div data-role="page" id="experiencePage" title="Experiences">
 		<div data-role="header" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="homePage" data-ajax="false">Home</a></li>
-					<li><a href="eventsPage" data-ajax="false">Events</a></li>
-					<li><a href="testimonialsPage" data-ajax="false">Testimonials</a></li>
-					<li><a href="logbookPage" data-ajax="false">Logbook</a></li>
+					<li><a href="#homePage" data-ajax="false">Home</a></li>
+					<li><a href="#eventsPage" data-ajax="false">Events</a></li>
+					<li><a href="#testimonialsPage" data-ajax="false">Testimonials</a></li>
+					<li><a href="#logbookPage" data-ajax="false">Logbook</a></li>
 				</ul>
 			</div>
 		</div>	
 	
 	</div>
-	<div data-role="page" id="eventsPage" title="Adventure, Inc.">
+	<div data-role="page" id="eventsPage" title="Events">
 		<div data-role="header" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="homePage" data-ajax="false">Home</a></li>
-					<li><a href="experiencePage" data-ajax="false">Experiences</a></li>
-					<li><a href="testimonialsPage" data-ajax="false">Testimonials</a></li>
-					<li><a href="logbookPage" data-ajax="false">Logbook</a></li>
+					<li><a href="#homePage" data-ajax="false">Home</a></li>
+					<li><a href="#experiencePage" data-ajax="false">Experiences</a></li>
+					<li><a href="#testimonialsPage" data-ajax="false">Testimonials</a></li>
+					<li><a href="#logbookPage" data-ajax="false">Logbook</a></li>
 				</ul>
 			</div>
 		</div>	
 	
 	</div>
-	<div data-role="page" id="testimonialsPage" title="Adventure, Inc.">
+	<div data-role="page" id="testimonialsPage" title="Testimonials">
 		<div data-role="header" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="homePage" data-ajax="false">Home</a></li>
-					<li><a href="experiencePage" data-ajax="false">Experiences</a></li>
-					<li><a href="eventsPage" data-ajax="false">Events</a></li>
-					<li><a href="logbookPage" data-ajax="false">Logbook</a></li>
+					<li><a href="#homePage" data-ajax="false">Home</a></li>
+					<li><a href="#experiencePage" data-ajax="false">Experiences</a></li>
+					<li><a href="#eventsPage" data-ajax="false">Events</a></li>
+					<li><a href="#logbookPage" data-ajax="false">Logbook</a></li>
 				</ul>
 			</div>
 		</div>	
 	
 	</div>
-	<div data-role="page" id="logbookPage" title="Adventure, Inc.">
+	<div data-role="page" id="logbookPage" title="Logbook">
 		<div data-role="header" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="homePage" data-ajax="false">Home</a></li>
-					<li><a href="experiencesPage" data-ajax="false">Experiences</a></li>
-					<li><a href="eventsPage" data-ajax="false">Events</a></li>
-					<li><a href="testimonialsPage" data-ajax="false">Testimonials</a></li>
+					<li><a href="#homePage" data-ajax="false">Home</a></li>
+					<li><a href="#experiencesPage" data-ajax="false">Experiences</a></li>
+					<li><a href="#eventsPage" data-ajax="false">Events</a></li>
+					<li><a href="#testimonialsPage" data-ajax="false">Testimonials</a></li>
 				</ul>
 			</div>
 		</div>	
