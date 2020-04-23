@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.container {
+  height: 6em;
+  position: relative;
+  border: 3px solid green;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+table{
+	width: 100%;
+	border-spacing: 2px;
+}
+
+th, td {
+	text-align: left;
+	margin-left: 10px;
+}
+
+th{
+	font-weight: bold;
+}
+td{
+	padding-right: 15px;
+}
+#experience1{
+	background-color: beige;
+	color: black;
+}
+#experience2{
+	background-color: silver;
+	color: black;
+}
+#experience3{
+	background-color: black;
+	color: #FEA99F;
+}
+#experience4{
+	background-color: #414724;
+	color: #F7E3BB;
+}
+.label{
+	font-weight:bolder;
+}

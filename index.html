@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html>
 	<!-- 
     Title: Adventure, Inc.
@@ -18,32 +20,44 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
 	<script src="js/themes.js"></script>
+	<script src="js/application.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="themes/siutest.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-	
+	<link rel="stylesheet" href="CSS/local.css" />
 
 </head>
 	
 <body>
+	
 	<div data-role="page" id="homePage" title="Adventure, Inc.">
 		<div data-role="header" data-position="fixed">
+			<div class="container">
+				<img src="Images/logo.jpg" alt="logo" class="vertical-center" style="height:5em"/>
+			</div>
+				
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#experiencePage" data-ajax="false">Experiences</a></li>
-					<li><a href="#eventsPage" data-ajax="false">Events</a></li>
-					<li><a href="#testimonialsPage" data-ajax="false">Testimonials</a></li>
-					<li><a href="#logbookPage" data-ajax="false">Logbook</a></li>
+					<li><a href="#experiencePage" data-ajax="false" prefetch="true" transition="pop">Experiences</a></li>
+					<li><a href="#eventsPage" data-ajax="false" prefetch="true" transition="pop">Events</a></li>
+					<li><a href="#testimonialsPage" data-ajax="false" prefetch="true" transition="pop">Testimonials</a></li>
+					<li><a href="#logbookPage" data-ajax="false" prefetch="true" transition="pop">Logbook</a></li>
+					<li><a href="#ticketsPage" data-ajax="false" prefetch="true" transition="pop">Tickets</a></li>
 				</ul>
 			</div>
 		</div>
 		
-		<input id="myButton" type="button" value="ChangeTheme" />
+		<div data-role="main">
+			<div> tbd image banner
+			</div>
+			<div> tbd section (repeat)
+				img
+				text
+			</div>
+		</div>
 		
-		<div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<div data-role="footer" data-position="fixed">
 			<a href="#contactPage">Contact</a>
 			<a href="#aboutPage" >About</a>
 			<a href="http://www.siu.edu">SUIC &copy; 2020</a>
@@ -55,89 +69,455 @@
 		</div>
 	
 	</div>
+	
+	
+	
 	<div data-role="page" id="contactPage" title="Home">
 		<div data-role="header" data-position="fixed">
+			<div class="container">
+				<img src="Images/logo.jpg" alt="logo" class="vertical-center" style="height:5em"/>
+			</div>
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#homePage" data-ajax="false">Home</a></li>
+					<li><a href="#homePage" data-ajax="false" prefetch="true" transition="pop">Home</a></li>
 				</ul>
 			</div>
-		</div>		
-	
+		</div>	
+		
+		<div data-role="main" class="ui-content">
+			<form action="echo.htm" method="post">
+				<div class="ui-field-contain">
+					<select name="salutation" id="salutation">
+						<option>Please select</option>
+						<option>Mr.</option>
+						<option>Ms.</option>
+						<option>Mrs.</option>
+					</select>
+					<div class="ui-field-contain">
+						<input type="text" name="name" id="name" placeholder="Name" />
+					</div>
+					<div class="ui-field-contain">
+						<input type="email" name="email" id="email" placeholder="Email"/>
+					</div>
+					<div class="ui-field-contain">
+						<fieldset data-role="controlgroup">
+							<legend>Contact Purpose</legend>
+							<input type="radio" name="contactpurpose" id="contactpurpose1" value="Ticket Purchase" checked="true">
+							<label for="contactpurpose1">Ticket Purchase</label>
+							<input type="radio" name="contactpurpose" id="contactpurpose2" value="General Inquiry">
+							<label for="contactpurpose2">General Inquiry</label>
+						</fieldset>
+					</div>
+					<div class="ui-field-contain">
+						<textarea name="message" id="message" placeholder="Message..." ></textarea>
+					</div>
+					<div class="ui-field-contain">
+						<fieldset data-role="controlgroup">
+							<input type="checkbox" name="maillist" id="maillist" value="true" checked="true">
+							<label for="maillist">I would like to be added to the mailing list</label>
+						</fieldset>
+					</div>
+					<div class="ui-field-contain">
+						<input type="submit" name="submit" value="Submit"/>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<a href="#contactPage">Contact</a>
+			<a href="#aboutPage" >About</a>
+			<a href="http://www.siu.edu">SUIC &copy; 2020</a>
+			<ul>
+				<li><a href="https://www.facebook.com/DistractedMindGames/" class="fa fa-facebook tooltip"></a></li>
+				<li><a href="#" class="fa fa-instagram tooltip"></a></li>
+				<li><a href="#" class="fa fa-twitter tooltip"></a></li>
+			</ul>
+		</div>
 	
 	</div>
+	
+	
+	
 	<div data-role="page" id="aboutPage" title="About">
 		<div data-role="header" data-position="fixed">
+			<div class="container">
+				<img src="Images/logo.jpg" alt="logo" class="vertical-center" style="height:5em"/>
+			</div>
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#homePage" data-ajax="false">Home</a></li>
+					<li><a href="#homePage" data-ajax="false" prefetch="true" transition="pop">Home</a></li>
 				</ul>
 			</div>
-		</div>	
+		</div>
+		
+		<div data-role="main">
+			<div> tbd image banner
+			</div>
+			<div> tbd section (repeat)
+					img
+					text
+			</div>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<a href="#contactPage">Contact</a>
+			<a href="#aboutPage" >About</a>
+			<a href="http://www.siu.edu">SUIC &copy; 2020</a>
+			<ul>
+				<li><a href="https://www.facebook.com/DistractedMindGames/" class="fa fa-facebook tooltip"></a></li>
+				<li><a href="#" class="fa fa-instagram tooltip"></a></li>
+				<li><a href="#" class="fa fa-twitter tooltip"></a></li>
+			</ul>
+		</div>		
 	
 	</div>
+	
+	
+	
 	<div data-role="page" id="ticketsPage" title="Tickets">
 		<div data-role="header" data-position="fixed">
+			<div class="container">
+				<img src="Images/logo.jpg" alt="logo" class="vertical-center" style="height:5em"/>
+			</div>
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#homePage" data-ajax="false">Home</a></li>
-					<li><a href="#experiencePage" data-ajax="false">Experiences</a></li>
-					<li><a href="#eventsPage" data-ajax="false">Events</a></li>
+					<li><a href="#homePage" data-ajax="false" prefetch="true" transition="pop">Home</a></li>
+					<li><a href="#experiencePage" data-ajax="false" prefetch="true" transition="pop">Experiences</a></li>
+					<li><a href="#eventsPage" data-ajax="false" prefetch="true" transition="pop">Events</a></li>
 				</ul>
 			</div>
-		</div>	
+		</div>
+		
+		<div data-role="main" class="ui-content">
+			<div class="ui-grid-d ui-responsive">
+				<table id="priceTable">
+					<thead>
+						<tr>
+							<th style="padding-right:10px">Event</th>
+							<th style="padding-right:10px" data-priority="1" class="th">Challenge</th>
+							<th style="padding-right:10px" data-priority="2" class="th">Experience</th>
+							<th style="padding-right:10px" data-priority="3" class="th">Max Participants</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Robbin' Hood</td>
+							<td>$50.00</td>
+							<td>$250.00</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>A Knight to Remember</td>
+							<td>$150.00</td>
+							<td>$400.00</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>Raising Hell</td>
+							<td>$100.00</td>
+							<td>$300.00</td>
+							<td>16</td>
+						</tr>
+						<tr>
+							<td>Echoes of Space</td>
+							<td>$50.00</td>
+							<td>$150.00</td>
+							<td>8</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+			<a href="#contactPage" data-role="button" data-ajax="false">Buy Tickets</a>
+		
+		</div>
+		
+		
+		<div data-role="footer" data-position="fixed">
+			<a href="#contactPage">Contact</a>
+			<a href="#aboutPage" >About</a>
+			<a href="http://www.siu.edu">SUIC &copy; 2020</a>
+			<ul>
+				<li><a href="https://www.facebook.com/DistractedMindGames/" class="fa fa-facebook tooltip"></a></li>
+				<li><a href="#" class="fa fa-instagram tooltip"></a></li>
+				<li><a href="#" class="fa fa-twitter tooltip"></a></li>
+			</ul>
+		</div>		
 	
 	</div>
+	
+	
+	
 	<div data-role="page" id="experiencePage" title="Experiences">
 		<div data-role="header" data-position="fixed">
+			<div class="container">
+				<img src="Images/logo.jpg" alt="logo" class="vertical-center" style="height:5em"/>
+			</div>
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#homePage" data-ajax="false">Home</a></li>
-					<li><a href="#eventsPage" data-ajax="false">Events</a></li>
-					<li><a href="#testimonialsPage" data-ajax="false">Testimonials</a></li>
-					<li><a href="#logbookPage" data-ajax="false">Logbook</a></li>
+					<li><a href="#homePage" data-ajax="false" prefetch="true" transition="pop">Home</a></li>
+					<li><a href="#eventsPage" data-ajax="false" prefetch="true" transition="pop">Events</a></li>
+					<li><a href="#testimonialsPage" data-ajax="false" prefetch="true" transition="pop">Testimonials</a></li>
+					<li><a href="#logbookPage" data-ajax="false" prefetch="true" transition="pop">Logbook</a></li>
+					<li><a href="#ticketsPage" data-ajax="false" prefetch="true" transition="pop">Tickets</a></li>
 				</ul>
 			</div>
-		</div>	
+		</div>
+		
+		<div data-role="main">
+			<div> tbd image banner
+			</div>
+			
+			<div class="ui-grid-b ui-responsive">
+				<table id="experienceDescription" class="experienceDescription">
+					<thead>
+					</thead>
+					<tbody>
+						<tr>
+							<td>image
+							</td>
+							<td><h2>Robbin' Hood</h2>
+								There is a rumor that Mrs. Hood, recently departed, has left a flash drive in a safe deposit box at the Main Street Bank for which Mr. Blankenship is offering a $10,000,000 reward. Unfortunately, your team is probably not the first to hear of this. 
+								<br><a href="#experience1" alt="learn more">Learn More</a>
+							</td>
+						</tr>
+						<tr>
+							<td>image
+							</td>
+							<td><h2>A Knight to Remember</h2>
+								You wake up to discover that you have been transported to a medieval village. A vague image of a man surrounded by mystical symbols lingers in the periphery of your memory. Who was he, where are you now, and how do you get back home? 
+								<br><a href="#experience2" alt="learn more">Learn More</a>
+							</td>
+						</tr>
+						<tr>
+							<td>image
+							</td>
+							<td><h2>Raising Hell</h2>
+								A scream from outside draws you to the window only to reveal a scene of gore. One man bites at the flesh of another who yells out again in pain. You've seen enough zombie movies to know what's going on. Are you prepared?
+								<br><a href="#experience3" alt="learn more">Learn More</a>
+							</td>
+						</tr>
+						<tr>
+							<td>image
+							</td>
+							<td><h2>Echoes of Space</h2>
+								Filled with derenium mined from Ceres-2 in the G-47 sector, the crew of the Ambition is looking forward to a well-deserved leave. You are in the cafeteria when the ship goes dark and emergency power flickers on. Everything is quiet. Too quiet.
+								<br><a href="#experience4" alt="learn more">Learn More</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<div data-role="panel" data-position="left" data-display="overlay" id="experience1">
+					
+					<h2>Robbin' Hood</h2>
+					
+					<ul>
+						<li><span class="label">Mission Objective: </span>Obtain the device from the bank vault and return it to Mr. Blankenship.</li>
+						<li><span class="label">Location: </span>123 Main Street<br>Detroit, MI 48217</li>
+						<li><span class="label">Challenge Rating: </span>Moderate</li>
+						<li><span class="label">Accomodations: </span>On-site 2 bedroom apartments offer full kitchen and bath. Common laundry facilities. </li>
+					</ul>
+					
+
+					<p> <a data-role="button" data-rel="close">Close</a></p>
+				</div>
+				<div data-role="panel" data-position="left" data-display="overlay" id="experience2">
+					
+					<h2>A Knight to Remember</h2>
+					
+					<ul>
+						<li><span class="label">Mission Objective: </span>Discover the reason you have been transported and how to get home.</li>
+						<li><span class="label">Location: </span>456 Anystreet Drive <br> Alpine, AL 35984</li>
+						<li><span class="label">Challenge Rating: </span>Difficult</li>
+						<li><span class="label">Accomodations: </span>Plymoth campgrounds is a 19-acre area of natural land on which the village of New Haven has been built. Outdoor camping as well as  cottage rooms in the village and formal rooms within Sorn manor are available based on player progress and choices.</li>
+					</ul>
+					
+					<p> <a data-role="button" data-rel="close">Close</a></p>
+					
+				</div>
+				<div data-role="panel" data-position="left" data-display="overlay" id="experience3">
+					
+					<h2>Raising Hell</h2>
+					
+										
+					<ul>
+						<li><span class="label">Mission Objective: </span>Survival</li>
+						<li><span class="label">Location: </span>12 Baker Street<br>Centralia, PA 19720</li>
+						<li><span class="label">Challenge Rating: </span>Difficult</li>
+						<li><span class="label">Accomodations: </span>Offices are converted into single or double sleeping quarters. Common restroom, kitchen, showers, and gym.</li>
+					</ul>
+					
+					<p> <a data-role="button" data-rel="close">Close</a></p>
+					
+				</div>
+				
+				<div data-role="panel" data-position="left" data-display="overlay" id="experience4">
+					
+					<h2>Echoes of Space</h2>
+														
+					<ul>
+						<li><span class="label">Mission Objective: </span>Survival</li>
+						<li><span class="label">Location: </span>1234 East Street Avenue <br> Chicago, IL 60018</li>
+						<li><span class="label">Challenge Rating: </span>Difficult</li>
+						<li><span class="label">Accomodations: </span>On-site private bunk, common restroom, kitchen, showers.</li>
+					</ul>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<a href="#contactPage">Contact</a>
+			<a href="#aboutPage" >About</a>
+			<a href="http://www.siu.edu">SUIC &copy; 2020</a>
+			<ul>
+				<li><a href="https://www.facebook.com/DistractedMindGames/" class="fa fa-facebook tooltip"></a></li>
+				<li><a href="#" class="fa fa-instagram tooltip"></a></li>
+				<li><a href="#" class="fa fa-twitter tooltip"></a></li>
+			</ul>
+		</div>		
 	
 	</div>
+	
 	<div data-role="page" id="eventsPage" title="Events">
 		<div data-role="header" data-position="fixed">
+			<div class="container">
+				<img src="Images/logo.jpg" alt="logo" class="vertical-center" style="height:5em"/>
+			</div>
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#homePage" data-ajax="false">Home</a></li>
-					<li><a href="#experiencePage" data-ajax="false">Experiences</a></li>
-					<li><a href="#testimonialsPage" data-ajax="false">Testimonials</a></li>
-					<li><a href="#logbookPage" data-ajax="false">Logbook</a></li>
+					<li><a href="#homePage" data-ajax="false" prefetch="true" transition="pop">Home</a></li>
+					<li><a href="#experiencePage" data-ajax="false" prefetch="true" transition="pop">Experiences</a></li>
+					<li><a href="#testimonialsPage" data-ajax="false" prefetch="true" transition="pop">Testimonials</a></li>
+					<li><a href="#logbookPage" data-ajax="false" prefetch="true" transition="pop">Logbook</a></li>
+					<li><a href="#ticketsPage" data-ajax="false" prefetch="true" transition="pop">Tickets</a></li>
 				</ul>
 			</div>
-		</div>	
+		</div>
+		
+		<div data-role="main">
+			<div> tbd image banner
+			</div>
+
+			<div data-role="tabs" class="tabrow">
+				<div data-role="navbar">
+					<ul>
+					  <li><a href="#tab1">Quick Play Events</a></li>
+					  <li><a href="#tab2">Experience Events</a></li>
+					</ul>
+					<div id="tab1">
+					  <p>Quick Play events are intended to last only a few hours. Players participating in Quick Play events are able to get a taste of the story by skipping directly to the final scene. Quick Play events run daily Monday - Thursday. </p>
+					</div>
+					<div id="tab2">
+					  <p>Experience events provide truly immersive game play with elements that can only be gained from the extended story. Teamwork is critical and a diverse set of talents often goes a long way. These games run from Friday through Sunday. </p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<a href="#ticketsPage" data-role="button" data-ajax="false">Ticket Prices</a>
+		
+		<div data-role="footer" data-position="fixed">
+			<a href="#contactPage">Contact</a>
+			<a href="#aboutPage" >About</a>
+			<a href="http://www.siu.edu">SUIC &copy; 2020</a>
+			<ul>
+				<li><a href="https://www.facebook.com/DistractedMindGames/" class="fa fa-facebook tooltip"></a></li>
+				<li><a href="#" class="fa fa-instagram tooltip"></a></li>
+				<li><a href="#" class="fa fa-twitter tooltip"></a></li>
+			</ul>
+		</div>		
 	
 	</div>
+	
+	
 	<div data-role="page" id="testimonialsPage" title="Testimonials">
 		<div data-role="header" data-position="fixed">
+			<div class="container">
+				<img src="Images/logo.jpg" alt="logo" class="vertical-center" style="height:5em"/>
+			</div>
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#homePage" data-ajax="false">Home</a></li>
-					<li><a href="#experiencePage" data-ajax="false">Experiences</a></li>
-					<li><a href="#eventsPage" data-ajax="false">Events</a></li>
-					<li><a href="#logbookPage" data-ajax="false">Logbook</a></li>
+					<li><a href="#homePage" data-ajax="false" prefetch="true" transition="pop">Home</a></li>
+					<li><a href="#experiencePage" data-ajax="false" prefetch="true" transition="pop">Experiences</a></li>
+					<li><a href="#eventsPage" data-ajax="false" prefetch="true" transition="pop">Events</a></li>
+					<li><a href="#logbookPage" data-ajax="false" prefetch="true" transition="pop">Logbook</a></li>
+					<li><a href="#ticketsPage" data-ajax="false" prefetch="true" transition="pop">Tickets</a></li>
 				</ul>
 			</div>
 		</div>	
+		
+		<div data-role="main">
+			<div> tbd image banner
+			</div>
+			<div> tbd section (repeat)
+					img
+					text
+			</div>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<a href="#contactPage">Contact</a>
+			<a href="#aboutPage" >About</a>
+			<a href="http://www.siu.edu">SUIC &copy; 2020</a>
+			<ul>
+				<li><a href="https://www.facebook.com/DistractedMindGames/" class="fa fa-facebook tooltip"></a></li>
+				<li><a href="#" class="fa fa-instagram tooltip"></a></li>
+				<li><a href="#" class="fa fa-twitter tooltip"></a></li>
+			</ul>
+		</div>		
 	
 	</div>
+	
+	
+	
 	<div data-role="page" id="logbookPage" title="Logbook">
 		<div data-role="header" data-position="fixed">
+			<div class="container">
+				<img src="Images/logo.jpg" alt="logo" class="vertical-center" style="height:5em"/>
+			</div>
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#homePage" data-ajax="false">Home</a></li>
-					<li><a href="#experiencesPage" data-ajax="false">Experiences</a></li>
-					<li><a href="#eventsPage" data-ajax="false">Events</a></li>
-					<li><a href="#testimonialsPage" data-ajax="false">Testimonials</a></li>
+					<li><a href="#homePage" data-ajax="false" prefetch="true" transition="pop">Home</a></li>
+					<li><a href="#experiencesPage" data-ajax="false" prefetch="true" transition="pop">Experiences</a></li>
+					<li><a href="#eventsPage" data-ajax="false" prefetch="true" transition="pop">Events</a></li>
+					<li><a href="#testimonialsPage" data-ajax="false" prefetch="true" transition="pop">Testimonials</a></li>
+					<li><a href="#ticketsPage" data-ajax="false" prefetch="true" transition="pop">Tickets</a></li>
 				</ul>
 			</div>
-		</div>	
+		</div>
+		
+		<div data-role="main">
+			<div> tbd image banner
+			</div>
+			<div class="ui-field-contain">
+				<form>
+					<div class="ui-field-contain">
+						<input id="noteTitle" type="text" placeholder="Add a note" />
+						<textarea id="noteContent" placeholder="Content"></textarea>
+						<input id="btnSubmit" type="button" value="Save Note" />
+					</div>
+				</form>
+				<ul id="noteList" data-role="listview" data-inset="true"></ul>
+			</div>
+		
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<a href="#contactPage">Contact</a>
+			<a href="#aboutPage" >About</a>
+			<a href="http://www.siu.edu">SUIC &copy; 2020</a>
+			<ul>
+				<li><a href="https://www.facebook.com/DistractedMindGames/" class="fa fa-facebook tooltip"></a></li>
+				<li><a href="#" class="fa fa-instagram tooltip"></a></li>
+				<li><a href="#" class="fa fa-twitter tooltip"></a></li>
+			</ul>
+		</div>		
 	
 	</div>
 	
