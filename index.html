@@ -31,6 +31,7 @@
 	
 <body>
 	
+	<!--Home Page -->
 	<div data-role="page" id="homePage" title="Adventure, Inc.">
 		<div data-role="header" data-position="fixed">
 			<div class="container">
@@ -71,7 +72,14 @@
 	</div>
 	
 	
-	
+	<!--Contact Page 
+		Form
+		•	Select menu: salutation
+		•	Text name, email
+		•	Radio button: contact purpose
+		•	Textarea: message
+		•	Checkbox: mail list opt-in
+		-->
 	<div data-role="page" id="contactPage" title="Home">
 		<div data-role="header" data-position="fixed">
 			<div class="container">
@@ -137,8 +145,8 @@
 	
 	</div>
 	
-	
-	
+	<!--About Page 
+		Collapsable Menu -->
 	<div data-role="page" id="aboutPage" title="About">
 		<div data-role="header" data-position="fixed">
 			<div class="container">
@@ -154,9 +162,10 @@
 		<div data-role="main">
 			<div> tbd image banner
 			</div>
-			<div> tbd section (repeat)
-					img
-					text
+			<div> Company information
+			</div>
+			<div> Opportunities (collapsed list)
+
 			</div>
 		</div>
 		
@@ -172,9 +181,9 @@
 		</div>		
 	
 	</div>
-	
-	
-	
+		
+	<!--Tickets Page 
+		Grid-->
 	<div data-role="page" id="ticketsPage" title="Tickets">
 		<div data-role="header" data-position="fixed">
 			<div class="container">
@@ -188,47 +197,41 @@
 				</ul>
 			</div>
 		</div>
-		
+				
 		<div data-role="main" class="ui-content">
-			<div class="ui-grid-d ui-responsive">
-				<table id="priceTable">
-					<thead>
-						<tr>
-							<th style="padding-right:10px">Event</th>
-							<th style="padding-right:10px" data-priority="1" class="th">Challenge</th>
-							<th style="padding-right:10px" data-priority="2" class="th">Experience</th>
-							<th style="padding-right:10px" data-priority="3" class="th">Max Participants</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Robbin' Hood</td>
-							<td>$50.00</td>
-							<td>$250.00</td>
-							<td>8</td>
-						</tr>
-						<tr>
-							<td>A Knight to Remember</td>
-							<td>$150.00</td>
-							<td>$400.00</td>
-							<td>8</td>
-						</tr>
-						<tr>
-							<td>Raising Hell</td>
-							<td>$100.00</td>
-							<td>$300.00</td>
-							<td>16</td>
-						</tr>
-						<tr>
-							<td>Echoes of Space</td>
-							<td>$50.00</td>
-							<td>$150.00</td>
-							<td>8</td>
-						</tr>
-					</tbody>
-				</table>
+			
+			<div class="ui-grid-d ui-responsive" id="pricetable">
+				<div class="ui-block-a">
+					<p style="font-weight:bold">Event</p>
+					<p>Robbin' Hood</p>
+					<p>A Knight to Remember</p>
+					<p>Raising Hell</p>
+					<p>Echoes of Space</p>
+				</div>
+				<div class="ui-block-b" >
+					<p style="font-weight:bold">Challenge</p>
+					<p>$50.00</p>
+					<p>$150.00</p>
+					<p>$100.00</p>
+					<p>$50.00</p>
+				</div>
+				<div class="ui-block-c">
+					<p style="font-weight:bold">Experience</p>
+					<p>$250.00</p>
+					<p>$400.00</p>
+					<p>$300.00</p>
+					<p>$150.00</p>
+				</div>
+				<div class="ui-block-d">
+					<p style="font-weight:bold">Max Participants</p>
+					<p>8</p>
+					<p>8</p>
+					<p>16</p>
+					<p>8</p>
+				</div>
 			</div>
-		
+			
+
 			<a href="#contactPage" data-role="button" data-ajax="false">Buy Tickets</a>
 		
 		</div>
@@ -247,8 +250,7 @@
 	
 	</div>
 	
-	
-	
+	<!--Experience Page -->
 	<div data-role="page" id="experiencePage" title="Experiences">
 		<div data-role="header" data-position="fixed">
 			<div class="container">
@@ -270,6 +272,21 @@
 			</div>
 			
 			<div class="ui-grid-b ui-responsive">
+				<div class="ui-block-a" id="experienceDescription">
+				</div>
+				<div class="ui-block-b">
+				</div>
+			</div>
+			
+			<div class="ui-block-a" style="position:relative">
+			  <div class="ui-bar">
+				<img style="  height: auto max-width: 100%" src="Images/doors.jpg"/>
+				 <p style="position: absolute text-align:right">Some Text</p>
+			  </div>
+			</div>
+				
+
+				
 				<table id="experienceDescription" class="experienceDescription">
 					<thead>
 					</thead>
@@ -383,6 +400,7 @@
 	
 	</div>
 	
+	<!--Events Page -->
 	<div data-role="page" id="eventsPage" title="Events">
 		<div data-role="header" data-position="fixed">
 			<div class="container">
@@ -435,7 +453,7 @@
 	
 	</div>
 	
-	
+	<!--Testimonials Page -->
 	<div data-role="page" id="testimonialsPage" title="Testimonials">
 		<div data-role="header" data-position="fixed">
 			<div class="container">
@@ -452,13 +470,64 @@
 			</div>
 		</div>	
 		
-		<div data-role="main">
+		<div data-role="main" class="ui-content">
 			<div> tbd image banner
 			</div>
-			<div> tbd section (repeat)
-					img
-					text
-			</div>
+			
+
+			<ul data-role="listview" data-inset="true">
+			
+				<!--Robin' Hood -->
+				<li data-role="list-divider">Robbin' Hood</li>
+				<li>							
+					<p style="white-space: normal">12/06/18  My boyfriend and I did this as a day event and it was so much fun. I totally felt like Catherine Zeta Jones from Entrapment! -Susie S. </p>
+				</li>
+				<li>							
+					<p style="white-space: normal">6/8/19 Do this now! There are so many twists in the plot that make planning and communication critical. </p>
+				</li>
+				
+			<!--A Knight to Remember -->
+				<li data-role="list-divider">A Knight to Remember</li>
+				<li>							
+					<p style="white-space: normal">4/19/2018 Our family did one of the one-day events on Tuesday and had a good time but we felt a bit overwhelmed with all the information they provided. I wish the weekend event was more affordable because i think the story needs to be told in full. I think it would be good for a weekend with the wife. Jacque J. </p>
+				</li>
+				<li>							
+					<p style="white-space: normal">6/23/19  The village was so amazingly detailed and just the right mix of fantasy and historical accuracy to make me feel like I was stepping into Whiterun from Skyrim. Theresa N. </p>
+				</li>		
+				
+			<!--Raising Hell -->
+				<li data-role="list-divider">Raising Hell</li>
+				<li>							
+					<p style="white-space: normal">11/16/2017 All of my friends were eaten by the zombies and I was the only survivor! And my mom said Fortnight would never do anything good for me. </p>
+				</li>
+				<li>							
+					<p style="white-space: normal"> 7/26/2019  I came for the Experience with my brother and his girlfriend for an end of summer thing before we headed back to college. The other people we met were pretty cool. I really thought I'd be more prepared for the zombie apocolype but the girls actually saved our asses lol. -Richard G. </p>
+				</li>
+				<li>							
+					<p style="white-space: normal"> 8/26/19 It rained the whole weekend so when we got home my husband and I were sick from being out in the cold and wet. The clues were too hard to find and the actor that "ate" me was rude. -Karen A. </p>
+				</li>
+				<li>							
+					<p style="white-space: normal">3/1/20  I'm glad we got to do this before everything was in lockdown but the experience kinda made me wonder if maybe the coronavirus could make us into zombies, you know? I mean this experience was like training. -Chad P. </p>
+				</li>
+				
+			<!--Echoes of Space -->
+				<li data-role="list-divider">Echoes of Space</li>
+				<li>							
+					<p style="white-space: normal">12/1/2019  Our company used this event as part of a final interview for two potential cantidates. The senior management team filled the remaining spots and nobody was allowed to identify themselves outside the context of the scenario. Leadership has many forms and both candidates proved worthy. -Ellen D. </p>
+				</li>
+				<li>							
+					<p style="white-space: normal">12/18/19 This was like living through the Aliens movie. Excellent addition. </p>
+				</li>
+				
+			<!--One Night Stand -->
+				<li data-role="list-divider">One Night Stand (closed)</li>
+				<li>							
+					<p style="white-space: normal">2/21/2018  We had an amazing time! Highlight of our vacation. -Jackie H. </p>
+				</li>
+				<li>							
+					<p style="white-space: normal">11/4/2018  Truely terrifying experience. Only two of the group made it out "alive" but those of us that were taken early were glued to the video feed the whole time.  </p>
+				</li>
+			</ul>
 		</div>
 		
 		<div data-role="footer" data-position="fixed">
@@ -474,8 +543,7 @@
 	
 	</div>
 	
-	
-	
+	<!--Logbook Page -->
 	<div data-role="page" id="logbookPage" title="Logbook">
 		<div data-role="header" data-position="fixed">
 			<div class="container">

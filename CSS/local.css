@@ -16,22 +16,6 @@
   transform: translateX(-50%);
 }
 
-table{
-	width: 100%;
-	border-spacing: 2px;
-}
-
-th, td {
-	text-align: left;
-	margin-left: 10px;
-}
-
-th{
-	font-weight: bold;
-}
-td{
-	padding-right: 15px;
-}
 #experience1{
 	background-color: beige;
 	color: black;
