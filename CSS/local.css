@@ -1,13 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
 
-
+.ui-panel.ui-panel-open {
+	position:fixed;
+}
 .container {
   height: 6em;
   position: relative;
-  border: 3px solid green;
 }
-
 .vertical-center {
   margin: 0;
   position: absolute;
@@ -16,19 +16,44 @@
   transform: translateX(-50%);
 }
 
-#experience1{
+.grid_container{
+	display: grid;
+	width:100%;
+	horizontal-align: center;
+	grid-template-columns: 1fr 1fr;
+}
+
+.grid_c2{
+	text-align: justify-all;
+	padding:1em;
+}
+
+#grid_exp1{
+	background-image: url("../Images/RobbinHood_10-3_300dpi.jpg");
+}	
+#grid_exp2{
+	background-image: url("../Images/AKnightToRemember_10-3_300dpi.jpg");
+}
+#grid_exp3{
+	background-image: url("../Images/RaisingHell_10-3_300dpi.jpg");
+}
+#grid_exp4{
+	background-image: url( "../Images/EchoesOfSpace_10-3_300dpi.jpg");
+}
+
+#panel_exp1{
 	background-color: beige;
 	color: black;
 }
-#experience2{
+#panel_exp2{
 	background-color: silver;
 	color: black;
 }
-#experience3{
+#panel_exp3{
 	background-color: black;
 	color: #FEA99F;
 }
-#experience4{
+#panel_exp4{
 	background-color: #414724;
 	color: #F7E3BB;
 }
