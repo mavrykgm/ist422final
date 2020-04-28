@@ -8,7 +8,7 @@
     Created: 4/10/20
     Notes: Created for IST-422-940, SIU
 
-    Last Updated: 1/28/20
+    Last Updated: 4/28/20
 	Purpose: Web Application for company, Adventure, Inc. which provides simulated challenge experiences for thrill seekers. 
 --><head>
 
@@ -16,7 +16,6 @@
 	<title>Avdenture, Inc. </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="CSS/jquery.mobile-1.4.5.min.css" />
-	<!--<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script> -->
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script> 
 	<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
 	<script src="js/themes.js"></script>
@@ -24,15 +23,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="themes/siutest.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-	<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> -->
 	<link rel="stylesheet" href="CSS/local.css" />
-	
 
 </head>
 	
 <body>
 	
-	<!--Home Page -->
+	<!--Home Page 
+		collapasible list-->
 	<div data-role="page" id="homePage" title="Adventure, Inc.">
 		<div data-role="header" data-position="fixed">
 			<div class="container">
@@ -178,7 +176,8 @@
 	</div>
 	
 	<!--About Page 
-		Collapsable Menu -->
+		Content grid
+		-->
 	<div data-role="page" id="aboutPage" title="About">
 		<div data-role="header" data-position="fixed">
 			<div class="container">
@@ -193,11 +192,37 @@
 		
 		<div data-role="main" class="ui-content">
 
-			<div> Company information
+			<h2>Company Info</h2>
+			<p>Adventure, Inc was founded in 2015 and strives to elevate the concept of simple escape rooms into interative stories that make you feel like you're living inside a movie, book, or dream.  </p>
+			
+			<h2>Featured Employee</h2>
+			<div class="ui-grid-b" >
+				<div class="ui-block-a" align="center">
+					<img src="Images/cheryl.jpg" alt="EmployeeOfTheMonth" style="max-height:100px" />
+				</div>
+				<div class="ui-block-b">
+					Location: Chicago, IL
+					Role: Set Designer
+					Name: Cheryl Rinns
+				</div>
+				<div class="ui-block-c">
+					Cheryl was recognized by the <b>Set Decorations Sociaty of America </b> for her design of Echoes of Space and will be partnering with Universal Studios before beginning her next project with us. 
+				</div>
+				
 			</div>
-			<div> Opportunities (collapsed list)
+			
+			<h2>Open Opportunities</h2>
+			
+			<ul data-role="listview" data-inset="true">
 
-			</div>
+				<li data-role="list-divider">Centralia, PA (Raising Hell)</li>
+				<li><p>Actor/Actress ((18+ zombies)</p></li>	
+
+				<li data-role="list-divider">Chicago, IL (Echoes in Space)</li>
+				<li><p>Electrician</p></li>		
+				<li><p>Costume Designer</p></li>	
+			</ul>
+			
 		</div>
 		
 		<div data-role="footer">
@@ -222,7 +247,7 @@
 	</div>
 		
 	<!--Tickets Page 
-		Grid with 4 columns-->
+		Content grid-->
 	<div data-role="page" id="ticketsPage" title="Tickets">
 		<div data-role="header" data-position="fixed">
 			<div class="container">
